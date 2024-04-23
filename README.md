@@ -36,7 +36,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Notifications page](https://github.com/franclobo/notifications-page)
-- Live Site URL: [Notifications page](https://notifications-page-2dzmi0dmi-franclobos-projects.vercel.app/)
+- Live Site URL: [Notifications page](https://notifications-page-pearl.vercel.app/)
 
 ## My process
 
