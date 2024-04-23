@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Notifications page](https://github.com/franclobo/notifications-page)
+- Live Site URL: [Notifications page](https://notifications-page-2dzmi0dmi-franclobos-projects.vercel.app/)
 
 ## My process
 
