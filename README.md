@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![image](https://github.com/franclobo/notifications-page/assets/58642949/e06cb99d-54a8-4c0f-95e9-5127e720d7d6)
 
 
 ### Links
