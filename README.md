@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Frontend Mentor - Notifications page solution
 
-## Getting Started
+This is a solution to the [Notifications page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/notifications-page-DqK5QAmKbC). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-First, run the development server:
+## Table of contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- [Frontend Mentor - Notifications page solution](#frontend-mentor---notifications-page-solution)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [The challenge](#the-challenge)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
+    - [What I learned](#what-i-learned)
+    - [Continued development](#continued-development)
+  - [Author](#author)
+  - [Acknowledgments](#acknowledgments)
+
+## Overview
+
+### The challenge
+
+Users should be able to:
+
+- Distinguish between "unread" and "read" notifications
+- Select "Mark all as read" to toggle the visual state of the unread notifications and set the number of unread messages to zero
+- View the optimal layout for the interface depending on their device's screen size
+- See hover and focus states for all interactive elements on the page
+
+### Screenshot
+
+![](./screenshot.jpg)
+
+
+### Links
+
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- [React](https://reactjs.org/) - JS library
+- [Next.js](https://nextjs.org/) - React framework
+- [Styled Components](https://styled-components.com/) - For styles
+
+### What I learned
+
+```js
+<div className="grid grid-cols-1 gap-4 mt-10 w-1/2">
+        {data.map(item => (
+          <div key={item.id} className={`${item.viewed === true ? "bg-white" : "bg-blue-100"} p-4 rounded-lg shadow-md cursor-pointer w-full`} onClick={() => handleMarkAsRead(item.id)}>
+            <div className="flex items-start justify-center">
+              <div className="flex items-center">
+                <Image
+                  src={item.avatar}
+                  alt={item.name}
+                  width={50}
+                  height={50}
+                  className="rounded-full"
+                />
+              </div>
+              <div className="flex flex-col items-start justify-center w-full">
+                <div className="flex items-center justify-between w-full">
+                  <div className=" flex flex-wrap items-center justify-start gap-1 ml-4">
+                    <h2 className="text-lg font-bold">{item.name}</h2>
+                    <p className="text-sm text-gray-500">{item.activity}</p>
+                    <p className={`${item.message === "Chess Club" ? "font-bold text-blue-950":"text-sm"}`}>{item.message}</p>
+                    {item.viewed ? null : <div className="w-4 h-4 bg-red-500 rounded-full"></div>}
+                  </div>
+                </div>
+                <p className="text-sm text-gray-500 ml-4">{item.time}</p>
+                {item.content.charAt(0) === "/" ? (
+                  ""
+                ) : (
+                  <p className={`${item.content ? "border border-solid border-gray-300 p-5" : ""} text-sm text-gray-500 ml-4`}>{item.content}</p>
+                )}
+              </div>
+              {item.content.charAt(0) === "/" ? (
+                  <Image
+                    src={item.content}
+                    alt={item.name}
+                    width={50}
+                    height={50}
+                    className="rounded-md"
+                  />
+                ) : (
+                  ""
+                )}
+            </div>
+          </div>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Continued development
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+I will continue to develop this project by adding more features and functionalities to it. I will also add more pages to the project to make it a full-fledged web application.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Author
 
-## Learn More
+- Website - [WebMinds Studio](https://www.webmindsstudio.com/)
+- Frontend Mentor - [@franclobo](https://www.frontendmentor.io/profile/franclobo)
+- Twitter - [@Pancho2788](https://twitter.com/Pancho2788)
 
-To learn more about Next.js, take a look at the following resources:
+## Acknowledgments
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+I would like to thank Frontend Mentor for providing me with this challenge. It was a great learning experience for me. I would also like to thank the community for their support and guidance.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

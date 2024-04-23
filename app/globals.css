@@ -3,20 +3,33 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --red: hsl(1, 90%, 64%);
+  --blue: hsl(219, 85%, 26%);
+  --white: hsl(0, 0%, 100%);
+  --very_light_grayish_blue: hsl(210, 60%, 98%);
+  --light_grayish_blue_1: hsl(211, 68%, 94%);
+  --light_grayish_blue_2: hsl(205, 33%, 90%);
+  --grayish_blue: hsl(219, 14%, 63%);
+  --dark_grayish_blue: hsl(219, 12%, 42%);
+  --very_dark_blue: hsl(224, 21%, 14%);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --red: hsl(1, 90%, 64%);
+    --blue: hsl(219, 85%, 26%);
+    --white: hsl(0, 0%, 100%);
+    --very_light_grayish_blue: hsl(210, 60%, 98%);
+    --light_grayish_blue_1: hsl(211, 68%, 94%);
+    --light_grayish_blue_2: hsl(205, 33%, 90%);
+    --grayish_blue: hsl(219, 14%, 63%);
+    --dark_grayish_blue: hsl(219, 12%, 42%);
+    --very_dark_blue: hsl(224, 21%, 14%);
   }
 }
 
 body {
+  position: relative;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -24,6 +37,16 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.attribution {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  font-size: 11px; text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
 
 @layer utilities {
